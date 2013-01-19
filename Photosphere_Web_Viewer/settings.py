@@ -1,6 +1,6 @@
 # Django settings for Photosphere_Web_Viewer project.
 from os.path import abspath, dirname, join, normpath
-#import dj_database_url #for Heroku
+import dj_database_url #for Heroku
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -14,16 +14,18 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': normpath(join(DJANGO_ROOT, 'sqlite3.db'))                      # Or path to database file if using sqlite3.
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} #only necessary stuff for Heroku
+#DATABASES['default'] =  dj_database_url.config()
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#        'NAME': normpath(join(DJANGO_ROOT, 'sqlite3.db'))                      # Or path to database file if using sqlite3.
        # 'USER': '',                      # Not used with sqlite3.
        # 'PASSWORD': '',                  # Not used with sqlite3.
        # 'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
        # 'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
+#    }
+#}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
