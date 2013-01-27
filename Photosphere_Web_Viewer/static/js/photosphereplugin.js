@@ -2,7 +2,7 @@
   $.fn.makePhotosphere = function() {
     //this.css({"backgroundColor": "black", "color": "white"});
     this.each(function() {
-    	    $(this).html("<img src='" + this.getAttribute("href") + " alt='Photosphere Image'>");
+    	    $(this).html("<img src='" + this.getAttribute("href") + "' alt='Photosphere Image'>");
 /*
     	try {
   		sphere = new Photosphere(this.getAttribute("href"));
