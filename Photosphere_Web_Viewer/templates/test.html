@@ -4,17 +4,20 @@
 		<title>photosphere</title>
 	</head>
 	<body>
-		<a href="http://dry-garden-9990.herokuapp.com/static/stest.jpg" id="goForIt">Launch Example</a>
-		<div id="sphere" style="width: 100%; height: 600px;"></div>
-		
 		<script src="/static/js/three.min.js"></script>
-		<script type="text/javascript" src="/static/js/sphere.js"></script>
-		<script type="text/javascript">
+		<script src="/static/js/sphere.js"></script>
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/photosphereplugin.js"></script>
+		<!--<a href="http://dry-garden-9990.herokuapp.com/static/stest.jpg" id="goForIt">Launch Example</a>
+		<div id="sphere" style="width: 100%; height: 600px;"></div>-->
+		<div href="http://dry-garden-9990.herokuapp.com/static/stest.jpg" class="photosphere" style="width: 100%; height: 600px;"> </div>
+		
+		<!--<script type="text/javascript">
 			document.getElementById("goForIt").onclick = function(){
 				sphere = new Photosphere(this.getAttribute("href"));
 				sphere.loadPhotosphere(document.getElementById("sphere"));
 				return false;
 			};
-		</script>
+		</script>-->
 	</body>
 </html>
