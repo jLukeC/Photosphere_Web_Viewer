@@ -1,6 +1,7 @@
 *.py[cod]
 *.pyc
-
+# Emacs adds tildes
+*~
 # C extensions
 *.so
 
